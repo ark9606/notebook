@@ -1,0 +1,112 @@
+$padding: 20px
+$border: 2px solid #363636
+$border1: 1px solid #363636
+
+html, body
+  margin: 0
+  padding: 0
+
+div#notebook_app
+  &>div
+    width: 100%
+    min-height: 100vh
+    box-sizing: border-box
+    padding: $padding
+
+    form#header_form
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding-bottom: $padding
+
+      label
+        margin-right: 20px
+
+      input
+        border: $border1
+        height: 25px
+        box-sizing: border-box
+
+        padding: 0 5px 0 5px
+
+      button
+        background: white
+        border: $border1
+        height: 25px
+        box-sizing: border-box
+        cursor: pointer
+        box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5)
+        transition: .3s
+        padding-left: 15px
+        padding-right: 15px
+        &:hover
+          background-color: #e6e6e6
+
+
+    div.records_container
+      width: 100%
+      height: 100%
+      border: $border
+      div.controls
+        width: 100%
+        display: flex
+        height: 25px
+        background-color: #d1d1d1
+
+
+
+        div.controls_button
+          display: flex
+          justify-content: space-between
+          align-items: center
+          flex-basis: 25%
+          border-right: $border
+          box-sizing: border-box
+          padding: 0 10px
+
+          div.triangle
+            font-size: 8px
+
+          button
+            width: 100%
+            height: 100%
+            background: transparent
+            border: none
+            padding: 0
+            text-align: start
+            cursor: pointer
+            outline: none
+            transition: .3s
+          &:hover
+            background-color: #f8f8f8
+
+
+      div.content
+        div.record
+          display: flex
+          width: 100%
+          min-height: 40px
+          div.col
+            display: flex
+            align-items: center
+            flex-basis: 25%
+            border-right: $border
+            box-sizing: border-box
+            padding-left: 5px
+            div.record_button
+              button
+                background: transparent
+                border: none
+                padding: 0
+                cursor: pointer
+                outline: none
+                transition: .3s
+                color: #068fff
+                margin: 0 3px
+                text-decoration: underline
+                &:hover
+                  color: #c70052
+            &:last-child
+              border: none
+          &.even
+            background-color: #ececec
